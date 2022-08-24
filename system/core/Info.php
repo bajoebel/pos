@@ -65,8 +65,8 @@
                             );
                             $token=AUTHORITY::generateKey($data);
                             ?>
-                            <div class="callout callout-success">
-                                <strong>Informasi !</strong> KEY INFO Berhasil Dibuat Silahkan Masukkan KEY INFO Pada file ../application/config/constants.php<br>
+                            <div class="callout callout-success ">
+                                <strong>Informasi !</strong> KEY INFO Berhasil Dibuat Silahkan Isikan KEY INFO Pada file ../application/config/constants.php<br>
                                 Copy File <?= $_POST['logo'] ?> kedalam folder images, KEY INFO Ini berlaku selama 7 Hari
                             </div>
                             <?php
