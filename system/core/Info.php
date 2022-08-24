@@ -64,6 +64,12 @@
                                 'expire'=>$expdate
                             );
                             $token=AUTHORITY::generateKey($data);
+                            ?>
+                            <div class="callout callout-success">
+                                <strong>Informasi !</strong> KEY INFO Berhasil Dibuat Silahkan Masukkan KEY INFO Pada file ../application/config/constants.php<br>
+                                Copy File <?= $_POST['logo'] ?> kedalam folder images, KEY INFO Ini berlaku selama 7 Hari
+                            </div>
+                            <?php
                         }else{
                             $data=array(
                                 'verified'=>false,
@@ -76,13 +82,16 @@
                                 'expire'=>'unlimited'
                             );
                             $token=AUTHORITY::generateKey($data);
+                            ?>
+                            <div class="callout callout-warning">
+                            <strong>Penting!</strong> KEY INFO Berhasil Dibuat Silahkan Masukkan KEY INFO Pada file ../application/config/constants.php<br>
+                                Copy File <?= $_POST['logo'] ?> kedalam folder images, Untuk aktivasi KEY INFO permanen silahkan kirim KEY INFO ini ke email bajoebel@gmail.com atau WA ke 0813-1046-0892
+                            </div>
+                            <?php
                         }
                         
                         ?>
-                        <div class="callout callout-success">
-                            <strong>APP KEY!</strong> KEY INFO Berhasil Dibuat Silahkan Masukkan KEY INFO Pada file ../application/config/constants.php<br>
-                            Copy File <?= $_POST['logo'] ?> kedalam folder images, KEY INFO Ini berlaku selama 7 Hari
-                        </div>
+                        
 
                         <textarea class="form-control" rows="10"><?= $token ?></textarea>
                         <?php
